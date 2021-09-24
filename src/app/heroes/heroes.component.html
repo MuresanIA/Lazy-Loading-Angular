@@ -1,0 +1,21 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Hero name</th>
+        <th scope="col">Hero race</th>
+        <th scope="col">Hero power</th>
+        <th scope="col">Hero description</th>
+        <th scope="col">Hero image</th>
+        <th scope="col">Create hero</th>
+      </tr>
+      <tbody *ngFor="let hero of heroes">
+        <tr>
+          <th scope="row">{{hero.name}}</th>
+          <td>{{hero.race}}</td>
+          <td>{{hero.power}}</td>
+          <td>{{hero.description}}</td>
+          <td><img [src]="hero.imagePath" alt="{{hero.name}}" class="img-responsive" style="max-height: 50px;"></td>
+          <td><button class="btn btn-success" style="cursor: pointer;">New hero</button></td>
+        </tr>
+    </tbody>
+</table>
